@@ -2,36 +2,19 @@
 
 int main()
 {
-    set_servo_position(1, 80);
-    enable_servos();
-    msleep(400);
-    set_servo_position(0, 1680);
-    msleep(400);
-    motor(0, 80);
-    motor(2, 80);
-    msleep(4500);
-    motor(0, -70);
-    motor(2, 70);
-    msleep(300);
-    motor(0, -76);
-    motor(2, -80);
-    msleep(1500);
-    motor(0, -70);
-    motor(2, 70);
-    msleep(690);
-    motor(0, -76);
-    motor(2, -80);
-    msleep(1930);
-    motor(0, 0);
-    motor(2,0);
     int Length = 16000;
     cmpc(0);
-    
+    set_servo_position(1, 1974);
+    enable_servos();
+    msleep(1700);
+    set_servo_position(0, 1725);
+    enable_servos();
+    msleep(750);
     
     while (Length > gmpc(0))
     {
             
-        if (analog(1) > 4078)
+        if (analog(1) > 4070)
 		{
 			motor(0, 86);
 			motor(2, 90);
@@ -58,22 +41,14 @@ int main()
         motor(0, 0);
         motor(2, 0);
         msleep(200);
-        set_servo_position(0, 1680);
+        set_servo_position(0, 1725);
         enable_servos();
         msleep(400);
-        set_servo_position(0, 936);
+        set_servo_position(0, 990);
         msleep(1000);
-        set_servo_position(1, 2047);
+        set_servo_position(1, 0);
         enable_servos();
         msleep(750);
-        set_servo_position(0, 1486);
-        msleep(400);
-        motor(0, -75);
-        motor(2, -75);
-        msleep(13000);
-        motor(0, -80);
-        motor(2, 80);
-        msleep(1500);
 
     }
    
@@ -84,6 +59,3 @@ int main()
         
     
 }
-
-        
-   
